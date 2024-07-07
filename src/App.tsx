@@ -30,7 +30,7 @@ const App = () => {
     // Запускаем анимацию notcoin
     setAnimate(true);
     // Сбрасываем анимацию
-    setTimeout(() => setAnimate(false), 300); // 300ms - продолжительность анимации
+    setTimeout(() => setAnimate(false), 60); // 300ms - продолжительность анимации
   };
 
   // Обработчик завершения анимации
@@ -41,7 +41,7 @@ const App = () => {
   // useEffect хук для восстановления энергии с течением времени
   useEffect(() => {
     const interval = setInterval(() => {
-      setEnergy((prevEnergy) => Math.min(prevEnergy + 1, 1000)); // Восстанавливаем энергию на 1 каждые 1000 мс (10 энергии в секунду)
+      setEnergy((prevEnergy) => Math.min(prevEnergy + 1, 1000)); // Восстанавливаем энергию на 1 каждые 1000 мс (1 энергия в секунду)
     }, 1000);
 
     return () => clearInterval(interval); // Очищаем интервал при размонтировании компонента
@@ -130,8 +130,8 @@ const App = () => {
           <div className="relative mt-4" onClick={handleClick} style={{ touchAction: 'none' }}>
             <img
               src={notcoin}
-              width={256}
-              height={256}
+              width={400}
+              height={400}
               alt="notcoin"
               className={animate ? 'notcoin-animate' : ''}
               style={{ transformOrigin: 'center' }}
