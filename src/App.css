@@ -53,5 +53,5 @@
 }
 
 .notcoin-animate {
-  animation: notcoin-click 300ms ease;
+  animation: notcoin-click 60ms ease;
 }
