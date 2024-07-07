@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Устанавливает шрифт для body */
 body {
   font-family: sans-serif;
 }
 
+/* Анимация "float" для плавного подъема и исчезновения */
 @keyframes float {
   0% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) rotate(5deg);
   }
   100% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-100px) rotate(-5deg);
   }
 }
 
-.bg-gradient-main {
+/* Фоновый градиент для основного фона */
+/*.bg-gradient-main {
   background: linear-gradient(to top, #fba007, #ffc630);
-}
+}*/
 
+/* Фоновый градиент для наложения */
 .bg-gradient-overlay {
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 212, 255, 0) 100%);
 }
 
+/* Радиальный градиент для наложения */
 .radial-gradient-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background: radial-gradient(circle, rgba(250, 214, 92, 0.8) 0%, rgba(250, 214, 92, 0) 60%);
+}
+
+.clicked {
+  transform: scale(0.99) rotate(0deg); /* Небольшой наклон и масштабирование при клике */
+}
+
+/* Цифра 1 для анимации при клике */
+.float-animation {
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
+  animation: float 1s ease-out forwards; /* forwards добавляет сохранение последнего кадра после окончания анимации */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }

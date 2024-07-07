@@ -1,42 +1,57 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding: 2rem; /* Внутренние отступы контейнера */
+  text-align: center; /* Выравнивание текста по центру */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 6em; /* Высота логотипа */
+  padding: 1.5em; /* Внутренние отступы логотипа */
+  will-change: filter; /* Оптимизация для будущих изменений свойства filter */
+  transition: filter 300ms; /* Плавный переход для изменения фильтра */
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa); /* Применение тени при наведении */
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Применение тени при наведении для логотипа с классом react */
 }
 
 @keyframes logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Начальное состояние анимации вращения */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Конечное состояние анимации вращения */
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .logo {
+    animation: logo-spin infinite 20s linear; /* Применение бесконечной анимации вращения к логотипу */
   }
 }
 
 .card {
-  padding: 2em;
+  padding: 2em; /* Внутренние отступы карточки */
 }
 
 .read-the-docs {
-  color: #888;
+  color: #888; /* Цвет текста для элемента с классом read-the-docs */
+}
+
+@keyframes notcoin-click {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.notcoin-animate {
+  animation: notcoin-click 300ms ease;
 }
