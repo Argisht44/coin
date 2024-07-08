@@ -68,7 +68,7 @@ const App = () => {
           <div className="w-full cursor-pointer">
             <div className="bg-[#1f1f1f] text-center py-2 rounded-xl">
               <p className="text-lg">
-                TopTapix <Arrow size={18} className="ml-0 mb-1 inline-block" />
+                TopTapiX <Arrow size={18} className="ml-0 mb-1 inline-block" />
               </p>
             </div>
           </div>
